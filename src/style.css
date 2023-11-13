@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+}
+
+#content {
+  display: grid;
+  grid-template-rows: 80px 1fr 54px; /* Header, Main Content, Footer */
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 200px minmax(500px, 1fr);
+
+  /* min-height: 100%; */
+  background-color: #ccc;
+  /* overflow-y: auto; Enable vertical scrollbar if needed */
+}
+
+#sidebar {
+  background-color: red;
+}
+
+#notes-view {
+  background-color: blue; 
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer-signature {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+#creator {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  font-size: 15px;
+}
+
+#github-logo {
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+#github-logo:hover {
+  transform: scale(1.2) rotate(360deg);
+} 
