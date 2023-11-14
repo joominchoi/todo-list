@@ -38,11 +38,26 @@ main {
 }
 
 #sidebar {
+  display: grid;
+  grid-template-rows: repeat(3, 6%) auto;
+
   background-color: red;
+  padding: 10px;
+}
+
+.sidebar-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-icon {
+  height: 30px;
 }
 
 #notes-view {
   background-color: blue; 
+  padding: 10px;
 }
 
 footer {
