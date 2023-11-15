@@ -85,41 +85,42 @@ function createHeader() {
 //   return mainContainer;
 // }
 
-// function createFooter() {
-//   const footer = document.createElement("footer");
-//   footer.setAttribute("id", "footer");
+function createFooter() {
+  const footer = document.createElement("footer");
+  footer.setAttribute("id", "footer");
 
-//   const footerSignature = document.createElement("div")
-//   footerSignature.setAttribute("id", "footer-signature")
+  const creator = document.createElement("p");
+  creator.setAttribute("id", "creator");
+  creator.textContent = "Created by jooomin";
 
-//   const creator = document.createElement("p");
-//   creator.setAttribute("id", "creator");
-//   creator.textContent = "Created by jooomin";
+  const githubLink = document.createElement("a")
+  githubLink.setAttribute("href", "https://github.com/jooomin")
 
-//   const githubLink = document.createElement("a")
-//   githubLink.setAttribute("href", "https://github.com/jooomin")
+  const githubIcon = new Image();
+  githubIcon.setAttribute("id", "github-logo")
+  githubIcon.src = githubLogo
 
-//   const githubLogo = new Image();
-//   githubLogo.setAttribute("id", "github-logo")
-//   githubLogo.src = githubIcon
+  footer.append(creator);
+  footer.append(githubLink)
+  githubLink.append(githubIcon)
 
-//   footer.append(footerSignature);
-//   footerSignature.append(creator);
-//   footerSignature.append(githubLink)
-//   githubLink.append(githubLogo)
-
-//   return footer;
-// }
-
-function initializeWebsite() {
-  const content = document.getElementById("content");
-
-  content.appendChild(createHeader());
-  // content.appendChild(createMainContainer());
-  // content.appendChild(createFooter());
-
-  // setActiveButton(document.getElementById('home-button'))
-  // loadHome(); 
+  return footer;
 }
+
+{/* <footer>
+  <p id="creator">Created by jooomin</p><a href="https://github.com/jooomin"><img id="github-logo"
+    src="file:///Users/joominchoi/Developer/The%20Odin%20Project/restaurant-page/dist/6fa18895f6e6c7772cab.svg"></a>
+</footer> */}
+
+  function initializeWebsite() {
+    const content = document.getElementById("content");
+
+    content.appendChild(createHeader());
+    // content.appendChild(createMainContainer());
+    content.appendChild(createFooter());
+
+    // setActiveButton(document.getElementById('home-button'))
+    // loadHome(); 
+  }
 
 export default initializeWebsite;

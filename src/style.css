@@ -61,10 +61,14 @@ main {
 }
 
 footer {
-  width: 100%;
-
   display: flex;
   justify-content: center;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  
+  width: 100%;
 }
 
 #creator {
@@ -82,4 +86,4 @@ footer {
 
 #github-logo:hover {
   transform: scale(1.2) rotate(360deg);
-} 
+}
