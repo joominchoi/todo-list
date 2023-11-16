@@ -17,6 +17,12 @@ function createHeader() {
   return header;
 }
 
+function createMain() {
+  const main = document.createElement("main");
+
+  return main;
+}
+
 // function createNav() {
 //   const nav = document.createElement("nav");
 
@@ -107,16 +113,11 @@ function createFooter() {
   return footer;
 }
 
-{/* <footer>
-  <p id="creator">Created by jooomin</p><a href="https://github.com/jooomin"><img id="github-logo"
-    src="file:///Users/joominchoi/Developer/The%20Odin%20Project/restaurant-page/dist/6fa18895f6e6c7772cab.svg"></a>
-</footer> */}
-
   function initializeWebsite() {
     const content = document.getElementById("content");
 
     content.appendChild(createHeader());
-    // content.appendChild(createMainContainer());
+    content.appendChild(createMain());
     content.appendChild(createFooter());
 
     // setActiveButton(document.getElementById('home-button'))
