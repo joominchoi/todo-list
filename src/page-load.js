@@ -20,7 +20,24 @@ function createHeader() {
 function createMain() {
   const main = document.createElement("main");
 
+  main.append(createSidebar());
+  main.append(createNotesView());
+
   return main;
+}
+
+function createSidebar() {
+  const sidebar = document.createElement("div");
+  sidebar.setAttribute("id", "sidebar")
+
+  return sidebar;
+}
+
+function createNotesView() {
+  const notesView = document.createElement("div");
+  notesView.setAttribute("id", "notes-view")
+
+  return notesView;
 }
 
 // function createNav() {
@@ -113,15 +130,15 @@ function createFooter() {
   return footer;
 }
 
-  function initializeWebsite() {
-    const content = document.getElementById("content");
+function initializeWebsite() {
+  const content = document.getElementById("content");
 
-    content.appendChild(createHeader());
-    content.appendChild(createMain());
-    content.appendChild(createFooter());
+  content.appendChild(createHeader());
+  content.appendChild(createMain());
+  content.appendChild(createFooter());
 
-    // setActiveButton(document.getElementById('home-button'))
-    // loadHome(); 
-  }
+  // setActiveButton(document.getElementById('home-button'))
+  // loadHome(); 
+}
 
 export default initializeWebsite;
