@@ -28,9 +28,64 @@ function createMain() {
 
 function createSidebar() {
   const sidebar = document.createElement("div");
-  sidebar.setAttribute("id", "sidebar")
+  sidebar.setAttribute("id", "sidebar");
+
+  sidebar.append(createInboxTab());
+  sidebar.append(createTodayTab());
+  sidebar.append(createThisWeekTab());
 
   return sidebar;
+}
+
+function createInboxTab() {
+  const inboxTab = document.createElement("div");
+  inboxTab.classList.add("sidebar-tab");;
+
+  const inboxTabIcon = new Image();
+  inboxTabIcon.classList.add("sidebar-icon")
+  inboxTabIcon.src = githubLogo;
+
+  const inboxTabText = document.createElement("p");
+  inboxTabText.textContent = "Inbox";
+  
+  inboxTab.append(inboxTabIcon);
+  inboxTab.append(inboxTabText);
+
+  return inboxTab;
+}
+
+function createTodayTab() {
+  const todayTab = document.createElement("div");
+  todayTab.classList.add("sidebar-tab");;
+
+  const todayTabIcon = new Image();
+  todayTabIcon.classList.add("sidebar-icon")
+  todayTabIcon.src = githubLogo;
+
+  const todayTabText = document.createElement("p");
+  todayTabText.textContent = "Today";
+  
+  todayTab.append(todayTabIcon);
+  todayTab.append(todayTabText);
+
+  return todayTab;
+}
+
+function createThisWeekTab() {
+  const thisWeekTab = document.createElement("div");
+  thisWeekTab.classList.add("sidebar-tab");;
+
+  const thisWeekTabIcon = new Image();
+  thisWeekTabIcon.classList.add("sidebar-icon")
+  thisWeekTabIcon.src = githubLogo;
+
+  const thisWeekTabText = document.createElement("p");
+  thisWeekTabText.textContent = "This Week";
+  
+  thisWeekTab.append(thisWeekTabIcon);
+  thisWeekTab.append(thisWeekTabText);
+
+  return thisWeekTab;
 }
 
 function createNotesView() {
