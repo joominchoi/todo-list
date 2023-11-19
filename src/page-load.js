@@ -38,7 +38,7 @@ function createSidebar() {
 }
 
 function createInboxTab() {
-  const inboxTab = document.createElement("div");
+  const inboxTab = document.createElement("button");
   inboxTab.classList.add("sidebar-tab");;
 
   const inboxTabIcon = new Image();
@@ -55,7 +55,7 @@ function createInboxTab() {
 }
 
 function createTodayTab() {
-  const todayTab = document.createElement("div");
+  const todayTab = document.createElement("button");
   todayTab.classList.add("sidebar-tab");;
 
   const todayTabIcon = new Image();
@@ -72,7 +72,7 @@ function createTodayTab() {
 }
 
 function createThisWeekTab() {
-  const thisWeekTab = document.createElement("div");
+  const thisWeekTab = document.createElement("button");
   thisWeekTab.classList.add("sidebar-tab");;
 
   const thisWeekTabIcon = new Image();
