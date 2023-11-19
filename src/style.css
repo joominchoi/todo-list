@@ -47,7 +47,7 @@ main {
   padding: 10px;
 }
 
-.sidebar-tab {
+.sidebar-button {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -56,9 +56,15 @@ main {
   border: none;
 }
 
-.sidebar-tab:hover {
+.sidebar-button:hover {
   cursor: pointer;
 
+  background-color: #ccc;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.sidebar-button.active{
   background-color: #ccc;
   font-weight: bold;
   border-radius: 5px;

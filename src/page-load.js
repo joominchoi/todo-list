@@ -30,62 +30,89 @@ function createSidebar() {
   const sidebar = document.createElement("div");
   sidebar.setAttribute("id", "sidebar");
 
-  sidebar.append(createInboxTab());
-  sidebar.append(createTodayTab());
-  sidebar.append(createThisWeekTab());
+  sidebar.append(createInboxButton());
+  sidebar.append(createTodayButton());
+  sidebar.append(createThisWeekButton());
 
   return sidebar;
 }
 
-function createInboxTab() {
-  const inboxTab = document.createElement("button");
-  inboxTab.classList.add("sidebar-tab");;
+function createInboxButton() {
+  const inboxButton = document.createElement("button");
+  inboxButton.classList.add("sidebar-button");;
 
-  const inboxTabIcon = new Image();
-  inboxTabIcon.classList.add("sidebar-icon")
-  inboxTabIcon.src = githubLogo;
+  const inboxButtonIcon = new Image();
+  inboxButtonIcon.classList.add("sidebar-icon")
+  inboxButtonIcon.src = githubLogo;
 
-  const inboxTabText = document.createElement("p");
-  inboxTabText.textContent = "Inbox";
+  const inboxButtonText = document.createElement("p");
+  inboxButtonText.textContent = "Inbox";
 
-  inboxTab.append(inboxTabIcon);
-  inboxTab.append(inboxTabText);
+  inboxButton.append(inboxButtonIcon);
+  inboxButton.append(inboxButtonText);
 
-  return inboxTab;
+  inboxButton.addEventListener("click", (e) => {
+    console.log("Inbox button has been clicked")
+    setActiveButton(inboxButton)
+  });
+
+  return inboxButton;
 }
 
-function createTodayTab() {
-  const todayTab = document.createElement("button");
-  todayTab.classList.add("sidebar-tab");;
+function createTodayButton() {
+  const todayButton = document.createElement("button");
+  todayButton.classList.add("sidebar-button");;
 
-  const todayTabIcon = new Image();
-  todayTabIcon.classList.add("sidebar-icon")
-  todayTabIcon.src = githubLogo;
+  const todayButtonIcon = new Image();
+  todayButtonIcon.classList.add("sidebar-icon")
+  todayButtonIcon.src = githubLogo;
 
-  const todayTabText = document.createElement("p");
-  todayTabText.textContent = "Today";
+  const todayButtonText = document.createElement("p");
+  todayButtonText.textContent = "Today";
 
-  todayTab.append(todayTabIcon);
-  todayTab.append(todayTabText);
+  todayButton.append(todayButtonIcon);
+  todayButton.append(todayButtonText);
 
-  return todayTab;
+  todayButton.addEventListener("click", (e) => {
+    console.log("Today button has been clicked")
+    setActiveButton(todayButton)
+  });
+
+  return todayButton;
 }
 
-function createThisWeekTab() {
-  const thisWeekTab = document.createElement("button");
-  thisWeekTab.classList.add("sidebar-tab");;
+function createThisWeekButton() {
+  const thisWeekButton = document.createElement("button");
+  thisWeekButton.classList.add("sidebar-button");;
 
-  const thisWeekTabIcon = new Image();
-  thisWeekTabIcon.classList.add("sidebar-icon")
-  thisWeekTabIcon.src = githubLogo;
+  const thisWeekButtonIcon = new Image();
+  thisWeekButtonIcon.classList.add("sidebar-icon")
+  thisWeekButtonIcon.src = githubLogo;
 
-  const thisWeekTabText = document.createElement("p");
-  thisWeekTabText.textContent = "This Week";
+  const thisWeekButtonText = document.createElement("p");
+  thisWeekButtonText.textContent = "This Week";
 
-  thisWeekTab.append(thisWeekTabIcon);
-  thisWeekTab.append(thisWeekTabText);
+  thisWeekButton.append(thisWeekButtonIcon);
+  thisWeekButton.append(thisWeekButtonText);
 
-  return thisWeekTab;
+  thisWeekButton.addEventListener("click", (e) => {
+    console.log("This Week button has been clicked")
+    setActiveButton(thisWeekButton)
+  });
+
+  return thisWeekButton;
+}
+
+function setActiveButton(button) {
+  const buttons = document.querySelectorAll(".sidebar-button");
+
+  buttons.forEach((button) => {
+    if (button !== this) {
+      button.classList.remove("active");
+    }
+  });
+
+  button.classList.add("active");
 }
 
 function createNotesView() {
