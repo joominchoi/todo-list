@@ -47,7 +47,7 @@ function createInboxTab() {
 
   const inboxTabText = document.createElement("p");
   inboxTabText.textContent = "Inbox";
-  
+
   inboxTab.append(inboxTabIcon);
   inboxTab.append(inboxTabText);
 
@@ -64,7 +64,7 @@ function createTodayTab() {
 
   const todayTabText = document.createElement("p");
   todayTabText.textContent = "Today";
-  
+
   todayTab.append(todayTabIcon);
   todayTab.append(todayTabText);
 
@@ -81,7 +81,7 @@ function createThisWeekTab() {
 
   const thisWeekTabText = document.createElement("p");
   thisWeekTabText.textContent = "This Week";
-  
+
   thisWeekTab.append(thisWeekTabIcon);
   thisWeekTab.append(thisWeekTabText);
 
@@ -94,74 +94,6 @@ function createNotesView() {
 
   return notesView;
 }
-
-// function createNav() {
-//   const nav = document.createElement("nav");
-
-//   const homeButton = document.createElement("button");
-//   homeButton.classList.add("nav-button");
-//   homeButton.setAttribute("id", "home-button")
-//   homeButton.textContent = "home";
-//   homeButton.addEventListener("click", (e) => {
-//     console.log("Home button has been clicked")
-//     setActiveButton(homeButton)
-//     loadHome();
-//   });
-
-//   const foodButton = document.createElement("button");
-//   foodButton.classList.add("nav-button");
-//   foodButton.textContent = "food";
-//   foodButton.addEventListener("click", (e) => {
-//     console.log("Food button has been clicked")
-//     setActiveButton(foodButton)
-//     loadfood();
-//   });
-
-//   const drinksButton = document.createElement("button");
-//   drinksButton.classList.add("nav-button");
-//   drinksButton.textContent = "drinks";
-//   drinksButton.addEventListener("click", (e) => {
-//     console.log("Drinks button has been clicked")
-//     setActiveButton(drinksButton)
-//     loaddrinks();
-//   });
-
-//   const contactButton = document.createElement("button");
-//   contactButton.classList.add("nav-button");
-//   contactButton.textContent = "contact";
-//   contactButton.addEventListener("click", (e) => {
-//     console.log("Contact button has been clicked")
-//     setActiveButton(contactButton)
-//     loadContact();
-//   });
-
-//   nav.appendChild(homeButton);
-//   nav.appendChild(foodButton);
-//   nav.appendChild(drinksButton);
-//   nav.appendChild(contactButton);
-
-//   return nav;
-// }
-
-// function setActiveButton(button) {
-//   const buttons = document.querySelectorAll(".nav-button");
-
-//   buttons.forEach((button) => {
-//     if (button !== this) {
-//       button.classList.remove("active");
-//     }
-//   });
-
-//   button.classList.add("active");
-// }
-
-
-// function createMainContainer() {
-//   const mainContainer = document.createElement("main");
-//   mainContainer.setAttribute("id", "main-container");
-
-//   return mainContainer;
-// }
 
 function createFooter() {
   const footer = document.createElement("footer");
