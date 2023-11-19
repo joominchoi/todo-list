@@ -8,5 +8,6 @@
 ## Learnings
 
 ## Recapping
+- Setting active and inactive elements by the addition and removal of a class name
 
 ## WIP
