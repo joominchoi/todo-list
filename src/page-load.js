@@ -2,6 +2,7 @@ import githubLogo from "./assets/images/github-logo.svg";
 import loadInbox from "./inbox";
 import loadToday from "./today";
 import loadThisWeek from "./this-week";
+import openFormPopup from "./add-project-form";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -57,6 +58,7 @@ function createAddProjectButton() {
 
   addProjectButton.addEventListener("click", (e) => {
     console.log("Add Project button has been clicked")
+    openFormPopup();
     // setActiveButton(inboxButton)
     // loadInbox();
   });
