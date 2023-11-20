@@ -1,5 +1,6 @@
 import githubLogo from "./assets/images/github-logo.svg";
 import loadInbox from "./inbox";
+import loadToday from "./today";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -77,7 +78,8 @@ function createTodayButton() {
 
   todayButton.addEventListener("click", (e) => {
     console.log("Today button has been clicked")
-    setActiveButton(todayButton)
+    setActiveButton(todayButton);
+    loadToday();
   });
 
   return todayButton;
