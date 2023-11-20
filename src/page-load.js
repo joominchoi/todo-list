@@ -1,4 +1,5 @@
-import githubLogo from "./assets/images/github-logo.svg"
+import githubLogo from "./assets/images/github-logo.svg";
+import loadInbox from "./inbox";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -54,6 +55,7 @@ function createInboxButton() {
   inboxButton.addEventListener("click", (e) => {
     console.log("Inbox button has been clicked")
     setActiveButton(inboxButton)
+    loadInbox();
   });
 
   return inboxButton;
