@@ -1,6 +1,7 @@
 import githubLogo from "./assets/images/github-logo.svg";
 import loadInbox from "./inbox";
 import loadToday from "./today";
+import loadThisWeek from "./this-week";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -102,6 +103,7 @@ function createThisWeekButton() {
   thisWeekButton.addEventListener("click", (e) => {
     console.log("This Week button has been clicked")
     setActiveButton(thisWeekButton)
+    loadThisWeek();
   });
 
   return thisWeekButton;
