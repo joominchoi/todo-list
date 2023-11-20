@@ -8,11 +8,11 @@ function createHeader() {
   const header = document.createElement("header");
 
   const headerTitle = document.createElement("p");
-  headerTitle.setAttribute("id", "header-title");
+  headerTitle.id = "header-title";
   headerTitle.textContent = "Todo List";
 
   const headerLogo = new Image();
-  headerLogo.setAttribute("id", "app-logo")
+  headerLogo.id = "app-logo";
   headerLogo.src = githubLogo
 
   header.appendChild(headerTitle)
@@ -32,7 +32,7 @@ function createMain() {
 
 function createSidebar() {
   const sidebar = document.createElement("div");
-  sidebar.setAttribute("id", "sidebar");
+  sidebar.id = "sidebar";
 
   sidebar.append(createAddProjectButton());
   sidebar.append(createInboxButton());
@@ -149,24 +149,24 @@ function setActiveButton(button) {
 
 function createNotesView() {
   const notesView = document.createElement("div");
-  notesView.setAttribute("id", "notes-view")
+  notesView.id = "notes-view";
 
   return notesView;
 }
 
 function createFooter() {
   const footer = document.createElement("footer");
-  footer.setAttribute("id", "footer");
+  footer.id = "footer";
 
   const creator = document.createElement("p");
-  creator.setAttribute("id", "creator");
+  creator.id = "creator";
   creator.textContent = "Created by jooomin";
 
   const githubLink = document.createElement("a")
   githubLink.setAttribute("href", "https://github.com/jooomin")
 
   const githubIcon = new Image();
-  githubIcon.setAttribute("id", "github-logo")
+  githubIcon.id ="github-logo";
   githubIcon.src = githubLogo
 
   footer.append(creator);

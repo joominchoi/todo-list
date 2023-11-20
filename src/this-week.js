@@ -1,9 +1,9 @@
 function createThisWeek() {
   const thisWeek = document.createElement("div");
-  thisWeek.setAttribute("id", "this-week");
+  thisWeek.id = "this-week";
 
   const title = document.createElement("h2");
-  title.setAttribute("id", "this-week-title")
+  title.id = "this-week-title";
   title.textContent = "This Week"
 
   thisWeek.appendChild(title)
