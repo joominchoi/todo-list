@@ -1,7 +1,7 @@
-function createForm() {
+function createAddProjectForm() {
   // Create form element
   const form = document.createElement('form');
-  form.id = 'myForm';
+  form.id = 'add-project-form';
 
   // Create label for Name input
   const nameLabel = document.createElement('label');
@@ -11,7 +11,7 @@ function createForm() {
   // Create input for Name
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
-  nameInput.id = 'name';
+  nameInput.id = 'project-name';
   nameInput.name = 'name';
   form.appendChild(nameInput);
 
@@ -20,7 +20,7 @@ function createForm() {
   // Create button for form submission
   const submitButton = document.createElement('button');
   submitButton.type = 'button'; // Set type to button to prevent form submission (for demonstration purposes)
-  submitButton.textContent = 'Submit';
+  submitButton.textContent = 'Add';
   submitButton.addEventListener('click', submitForm);
   form.appendChild(submitButton);
 
@@ -34,12 +34,12 @@ function createForm() {
 
 // Function to handle form submission
 function submitForm() {
-  const nameInput = document.getElementById('name');
+  const nameInput = document.getElementById('project-name');
 
   const name = nameInput.value;
 
   if (name) {
-    alert(`Form submitted!\nProject name: ${name}`);
+    alert(`Project added!\nProject name: ${name}`);
   } else {
     alert('Please fill out all fields.');
   }
@@ -50,7 +50,7 @@ function openFormPopup() {
   popup.id = 'popup';
 
   // Create and append the form to the popup
-  const form = createForm();
+  const form = createAddProjectForm();
   popup.appendChild(form);
 
   // Append the popup to the body
