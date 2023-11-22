@@ -67,6 +67,7 @@ function submitForm() {
   if (name) {
     // alert(`Project added!\nProject name: ${name}`);
     sidebar.append(createNewProject(name))
+    closeFormPopup()
   } else {
     alert('Please fill out all fields.');
   }
