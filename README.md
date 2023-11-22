@@ -15,8 +15,10 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
   - This way, both explicit and implicit rows will have a height of 6%. Adjust the values and other styles according to your specific layout requirements.
 - Put **export** in front of function if I wish to reuse it in another module.
 - The more I practice the single-responsility principle, the more naturally I am inclined to want to organise my code in an easy to read manner; whether that be the file structure or seperating functions in to seperate modules.
+- I have organised files into folders that make sense to me but I think the main point is taking away the ability to separate functions and components into their modules. Folder structure I think is a matter of personal preference and I will need to adapt to the preference of future teammates.
 - **./** refers to current directory
 - **App.js** previously named **page-load** is the main entry point of your application where you compose your components and pages.
+- When restructuring files and folders, make sure to double check imports and pathing to assets such as images
 
 
 ## Recapping
