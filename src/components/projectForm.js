@@ -50,6 +50,8 @@ function createNewProject(userInput) {
   newProjectButton.append(newProjectButtonIcon);
   newProjectButton.append(newProjectButtonText);
 
+  setActiveButton(newProjectButton);
+
   newProjectButton.addEventListener("click", (e) => {
     console.log(`${userInput} has been clicked`);
     setActiveButton(newProjectButton);
@@ -69,8 +71,9 @@ function submitForm() {
 
   if (name) {
     // alert(`Project added!\nProject name: ${name}`);
-    sidebar.append(createNewProject(name))
-    closeFormPopup()
+    sidebar.append(createNewProject(name));
+    closeFormPopup();
+    loadNewProject(name);
   } else {
     alert('Please fill out all fields.');
   }
