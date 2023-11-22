@@ -135,7 +135,7 @@ function createAddProjectButton() {
   return addProjectButton;
 }
 
-function setActiveButton(button) {
+export function setActiveButton(button) {
   const buttons = document.querySelectorAll(".sidebar-button");
 
   buttons.forEach((button) => {

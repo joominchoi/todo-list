@@ -13,6 +13,7 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
 - **grid-template-rows: repeat(auto-fill, 6%);** sets the explicit rows to have a height of 6% and uses auto-fill to create as many rows as needed based on the content.
 - **grid-auto-rows: 6%;** sets the height for any additional rows that are created implicitly (dynamically added) to also be 6%.
   - This way, both explicit and implicit rows will have a height of 6%. Adjust the values and other styles according to your specific layout requirements.
+- Put **export** in front of function if I wish to reuse it in another module.
 
 ## Recapping
 - Setting active and inactive elements by the addition and removal of a class name
