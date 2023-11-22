@@ -1,5 +1,6 @@
 import githubLogo from "./assets/images/github-logo.svg";
 import { setActiveButton } from "./page-load";
+import loadNewProject from "./new-project";
 
 function createAddProjectForm() {
   // Create form element
@@ -50,8 +51,9 @@ function createNewProject(userInput) {
   newProjectButton.append(newProjectButtonText);
 
   newProjectButton.addEventListener("click", (e) => {
-    console.log("New Project button has been clicked")
-    setActiveButton(newProjectButton)
+    console.log(`${userInput} has been clicked`);
+    setActiveButton(newProjectButton);
+    loadNewProject(userInput);
   });
 
   return newProjectButton;
