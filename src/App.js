@@ -1,8 +1,8 @@
 import githubLogo from "./assets/images/github-logo.svg";
-import loadInbox from "./inbox";
-import loadToday from "./today";
-import loadThisWeek from "./this-week";
-import openFormPopup from "./add-project-form";
+import loadInbox from "./pages/inbox";
+import loadToday from "./pages/today";
+import loadThisWeek from "./pages/this-week";
+import openFormPopup from "./components/add-project-form";
 
 function createHeader() {
   const header = document.createElement("header");

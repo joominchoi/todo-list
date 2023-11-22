@@ -14,6 +14,10 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
 - **grid-auto-rows: 6%;** sets the height for any additional rows that are created implicitly (dynamically added) to also be 6%.
   - This way, both explicit and implicit rows will have a height of 6%. Adjust the values and other styles according to your specific layout requirements.
 - Put **export** in front of function if I wish to reuse it in another module.
+- The more I practice the single-responsility principle, the more naturally I am inclined to want to organise my code in an easy to read manner; whether that be the file structure or seperating functions in to seperate modules.
+- **./** refers to current directory
+- **App.js** previously named **page-load** is the main entry point of your application where you compose your components and pages.
+
 
 ## Recapping
 - Setting active and inactive elements by the addition and removal of a class name

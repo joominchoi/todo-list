@@ -1,4 +1,4 @@
-import initializeWebsite from './page-load'
-import './style.css'
+import initializeWebsite from './App'
+import './assets/styles/style.css'
 
 initializeWebsite();

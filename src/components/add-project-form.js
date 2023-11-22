@@ -1,6 +1,6 @@
 import githubLogo from "./assets/images/github-logo.svg";
-import { setActiveButton } from "./page-load";
-import loadNewProject from "./new-project";
+import { setActiveButton } from "../App";
+import loadNewProject from "../pages/new-project";
 
 function createAddProjectForm() {
   // Create form element
