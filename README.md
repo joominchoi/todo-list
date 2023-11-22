@@ -15,6 +15,5 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
 
 ## WIP
 - Get the logic working for projects:
-- adding a project
 - deleting a project
 - renaming a project

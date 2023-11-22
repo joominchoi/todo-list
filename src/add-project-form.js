@@ -1,3 +1,5 @@
+import githubLogo from "./assets/images/github-logo.svg";
+
 function createAddProjectForm() {
   // Create form element
   const form = document.createElement('form');
@@ -32,14 +34,39 @@ function createAddProjectForm() {
   return form;
 }
 
+function createNewProject(userInput) {
+  const newProjectButton = document.createElement("button");
+  newProjectButton.classList.add("sidebar-button");;
+
+  const newProjectButtonIcon = new Image();
+  newProjectButtonIcon.classList.add("sidebar-icon")
+  newProjectButtonIcon.src = githubLogo;
+
+  const newProjectButtonText = document.createElement("p");
+  newProjectButtonText.textContent = userInput;
+
+  newProjectButton.append(newProjectButtonIcon);
+  newProjectButton.append(newProjectButtonText);
+
+  newProjectButton.addEventListener("click", (e) => {
+    console.log("New Project button has been clicked")
+    setActiveButton(newProjectButton)
+  });
+
+  return newProjectButton;
+}
+
 // Function to handle form submission
 function submitForm() {
+  const sidebar = document.getElementById('sidebar')
+
   const nameInput = document.getElementById('project-name');
 
   const name = nameInput.value;
 
   if (name) {
-    alert(`Project added!\nProject name: ${name}`);
+    // alert(`Project added!\nProject name: ${name}`);
+    sidebar.append(createNewProject(name))
   } else {
     alert('Please fill out all fields.');
   }
