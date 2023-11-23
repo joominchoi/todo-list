@@ -1,7 +1,7 @@
 import githubLogo from "../../assets/images/github-logo.svg";
 import setActiveButton from "../../utils/setActiveButton";
 import loadThisWeek from "../../pages/thisWeek";
-import { closeFormPopup } from "../projectForm";
+import closeFormPopup from "../../utils/closeFormPopup";
 
 function createThisWeekButton() {
   const thisWeekButton = document.createElement("button");

@@ -1,7 +1,7 @@
 import githubLogo from "../../assets/images/github-logo.svg";
 import setActiveButton from "../../utils/setActiveButton";
 import loadInbox from "../../pages/inbox";
-import { closeFormPopup } from "../projectForm";
+import closeFormPopup from "../../utils/closeFormPopup";
 
 function createInboxButton() {
   const inboxButton = document.createElement("button");

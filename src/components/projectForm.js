@@ -1,6 +1,7 @@
 import githubLogo from "../assets/images/github-logo.svg";
 import setActiveButton from "../utils/setActiveButton";
 import loadNewProject from "../pages/newProject";
+import closeFormPopup from "../utils/closeFormPopup";
 
 function createProjectForm() {
   // Create form element
@@ -89,13 +90,6 @@ function openFormPopup() {
 
   // Append the popup to the body
   document.body.appendChild(popup);
-}
-
-export function closeFormPopup() {
-  const popup = document.getElementById('popup');
-  if (popup) {
-    document.body.removeChild(popup);
-  }
 }
 
 export default openFormPopup;

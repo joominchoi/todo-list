@@ -1,7 +1,7 @@
 import githubLogo from "../../assets/images/github-logo.svg";
 import setActiveButton from "../../utils/setActiveButton";
 import loadToday from "../../pages/today";
-import { closeFormPopup } from "../projectForm";
+import closeFormPopup from "../../utils/closeFormPopup";
 
 function createTodayButton() {
   const todayButton = document.createElement("button");
@@ -20,7 +20,7 @@ function createTodayButton() {
   todayButton.addEventListener("click", (e) => {
     console.log("Today button has been clicked")
     setActiveButton(todayButton);
-    closeFormPopup()
+    closeFormPopup();
     loadToday();
   });
 
