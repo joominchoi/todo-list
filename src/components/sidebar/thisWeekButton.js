@@ -1,6 +1,7 @@
 import githubLogo from "../../assets/images/github-logo.svg";
 import setActiveButton from "../../utils/setActiveButton";
 import loadThisWeek from "../../pages/thisWeek";
+import { closeFormPopup } from "../projectForm";
 
 function createThisWeekButton() {
   const thisWeekButton = document.createElement("button");
@@ -19,6 +20,7 @@ function createThisWeekButton() {
   thisWeekButton.addEventListener("click", (e) => {
     console.log("This Week button has been clicked")
     setActiveButton(thisWeekButton)
+    closeFormPopup();
     loadThisWeek();
   });
 

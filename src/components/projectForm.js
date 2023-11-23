@@ -2,7 +2,7 @@ import githubLogo from "../assets/images/github-logo.svg";
 import setActiveButton from "../utils/setActiveButton";
 import loadNewProject from "../pages/newProject";
 
-function createAddProjectForm() {
+function createProjectForm() {
   // Create form element
   const form = document.createElement('form');
   form.id = 'add-project-form';
@@ -36,6 +36,24 @@ function createAddProjectForm() {
   return form;
 }
 
+// Function to handle form submission
+function submitForm() {
+  const sidebar = document.getElementById('sidebar')
+
+  const nameInput = document.getElementById('project-name');
+
+  const name = nameInput.value;
+
+  if (name) {
+    // alert(`Project added!\nProject name: ${name}`);
+    sidebar.append(createNewProject(name));
+    closeFormPopup();
+    loadNewProject(name);
+  } else {
+    alert('Please fill out all fields.');
+  }
+}
+
 function createNewProject(userInput) {
   const newProjectButton = document.createElement("button");
   newProjectButton.classList.add("sidebar-button");;
@@ -61,37 +79,19 @@ function createNewProject(userInput) {
   return newProjectButton;
 }
 
-// Function to handle form submission
-function submitForm() {
-  const sidebar = document.getElementById('sidebar')
-
-  const nameInput = document.getElementById('project-name');
-
-  const name = nameInput.value;
-
-  if (name) {
-    // alert(`Project added!\nProject name: ${name}`);
-    sidebar.append(createNewProject(name));
-    closeFormPopup();
-    loadNewProject(name);
-  } else {
-    alert('Please fill out all fields.');
-  }
-}
-
 function openFormPopup() {
   const popup = document.createElement('div');
   popup.id = 'popup';
 
   // Create and append the form to the popup
-  const form = createAddProjectForm();
+  const form = createProjectForm();
   popup.appendChild(form);
 
   // Append the popup to the body
   document.body.appendChild(popup);
 }
 
-function closeFormPopup() {
+export function closeFormPopup() {
   const popup = document.getElementById('popup');
   if (popup) {
     document.body.removeChild(popup);

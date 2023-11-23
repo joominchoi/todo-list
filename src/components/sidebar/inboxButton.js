@@ -1,6 +1,7 @@
 import githubLogo from "../../assets/images/github-logo.svg";
 import setActiveButton from "../../utils/setActiveButton";
 import loadInbox from "../../pages/inbox";
+import { closeFormPopup } from "../projectForm";
 
 function createInboxButton() {
   const inboxButton = document.createElement("button");
@@ -18,8 +19,9 @@ function createInboxButton() {
   inboxButton.append(inboxButtonText);
 
   inboxButton.addEventListener("click", (e) => {
-    console.log("Inbox button has been clicked")
-    setActiveButton(inboxButton)
+    console.log("Inbox button has been clicked");
+    setActiveButton(inboxButton);
+    closeFormPopup();
     loadInbox();
   });
 
