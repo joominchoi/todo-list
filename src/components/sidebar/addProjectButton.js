@@ -1,5 +1,6 @@
 import githubLogo from "../../assets/images/github-logo.svg";
-import openFormPopup from "../projectForm";
+import openFormPopup from "../../utils/openFormPopup";
+
 
 function createAddProjectButton() {
   const addProjectButton = document.createElement("button")
