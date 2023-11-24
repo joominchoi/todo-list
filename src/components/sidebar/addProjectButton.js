@@ -1,5 +1,6 @@
 import githubLogo from "../../assets/images/github-logo.svg";
 import openFormPopup from "../../utils/openFormPopup";
+import createProjectForm from "../addProjectForm";
 
 
 function createAddProjectButton() {
@@ -18,7 +19,7 @@ function createAddProjectButton() {
 
   addProjectButton.addEventListener("click", (e) => {
     console.log("Add Project button has been clicked")
-    openFormPopup();
+    openFormPopup(createProjectForm());
   });
 
   return addProjectButton;
