@@ -19,12 +19,15 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
 - **./** refers to current directory
 - **App.js** previously named **page-load** is the main entry point of your application where you compose your components and pages.
 - When restructuring files and folders, make sure to double check imports and pathing to assets such as images
+- Check that npx webpack --watch is running after restarting machine; I was wondering why my changes weren't being applied before realising this mistake.
 
 
 ## Recapping
 - Setting active and inactive elements by the addition and removal of a class name
 
 ## WIP
+- Todo: export functions into its own module following single responsibility principle and again reorganise files and folder structure
+- Create update and delete function in project settings form
 - Get the logic working for projects:
 - deleting a project
 - renaming a project

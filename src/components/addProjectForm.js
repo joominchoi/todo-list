@@ -55,7 +55,7 @@ function submitForm() {
   }
 }
 
-function createNewProject(userInput) {
+export function createNewProject(userInput) {
   const newProjectButton = document.createElement("button");
   newProjectButton.classList.add("sidebar-button");;
 
