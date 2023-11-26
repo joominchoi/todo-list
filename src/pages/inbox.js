@@ -1,9 +1,9 @@
 function createInbox() {
   const inbox = document.createElement("div");
-  inbox.id = "inbox";
+  inbox.classList.add('note')
 
   const title = document.createElement("h2");
-  title.id ="inbox-title";
+  title.classList.add('note-title')
   title.textContent = "Inbox"
 
   inbox.appendChild(title)

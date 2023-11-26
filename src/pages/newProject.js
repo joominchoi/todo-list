@@ -3,10 +3,10 @@ import openFormPopup from "../utils/openFormPopup";
 
 function createNewProjectNotesView(userInput) {
   const newProject = document.createElement("div");
-  newProject.id = userInput;
+  newProject.classList.add('note')
 
   const title = document.createElement("h2");
-  title.id = `${userInput}-title`;
+  title.classList.add('note-title')
   title.textContent = userInput
 
   const settingsButton = document.createElement("button")

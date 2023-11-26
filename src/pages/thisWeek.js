@@ -1,9 +1,9 @@
 function createThisWeek() {
   const thisWeek = document.createElement("div");
-  thisWeek.id = "this-week";
+  thisWeek.classList.add('note')
 
   const title = document.createElement("h2");
-  title.id = "this-week-title";
+  title.classList.add('note-title')
   title.textContent = "This Week"
 
   thisWeek.appendChild(title)

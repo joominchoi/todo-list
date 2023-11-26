@@ -1,9 +1,9 @@
 function createToday() {
   const today = document.createElement("div");
-  today.id = "today";
+  today.classList.add('note')
 
   const title = document.createElement("h2");
-  title.id = "today-title";
+  title.classList.add('note-title')
   title.textContent = "Today"
 
   today.appendChild(title)
