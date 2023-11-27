@@ -26,6 +26,7 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
 - Setting active and inactive elements by the addition and removal of a class name
 
 ## WIP
+- Refactor recent code
 - Finish update function to update names of ids, classes, and notes-view title
 - Create update and delete function in project settings form
 - Get the logic working for projects:

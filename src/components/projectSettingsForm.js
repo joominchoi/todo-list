@@ -45,13 +45,17 @@ function updateProject() {
   console.log("Update Project button clicked")
 
   const nameInput = document.getElementById('project-name');
-
   const name = nameInput.value;
 
   const pElementInActiveButton = document.querySelector('.sidebar-button.active p');
+  const activeView = document.getElementById(`${pElementInActiveButton.textContent}-title`)
 
   if (name) {
+    activeView.removeAttribute('id')
+    activeView.id = `${name}-title`
+    activeView.textContent = name
     pElementInActiveButton.textContent = name
+    console.log(activeView.id)
     closeFormPopup();
   } else {
     alert('Please fill out all fields.');

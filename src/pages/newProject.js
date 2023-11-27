@@ -6,7 +6,7 @@ function createNewProjectNotesView(userInput) {
   newProject.classList.add('note')
 
   const title = document.createElement("h2");
-  title.classList.add('note-title')
+  title.id = (`${userInput}-title`)
   title.textContent = userInput
 
   const settingsButton = document.createElement("button")
