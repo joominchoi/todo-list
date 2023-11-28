@@ -1,6 +1,6 @@
 function createNotesView() {
   const notesView = document.createElement("div");
-  notesView.id = "notes-view";
+  notesView.id = "project-view";
 
   return notesView;
 }

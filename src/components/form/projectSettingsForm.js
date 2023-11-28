@@ -1,6 +1,4 @@
-import loadNewProject from "../pages/newProject";
-import closeFormPopup from "../utils/closeFormPopup";
-import { createNewProject } from "./addProjectForm";
+import closeFormPopup from "../../utils/closeFormPopup";
 
 function createProjectSettingsForm() {
   const form = document.createElement('form');
@@ -48,13 +46,16 @@ function updateProject() {
   const name = nameInput.value;
 
   const pElementInActiveButton = document.querySelector('.sidebar-button.active p');
-  const activeView = document.getElementById(`${pElementInActiveButton.textContent}-title`)
+  const activeView = document.getElementById(`${pElementInActiveButton.textContent}-project`)
+  const activeViewID = activeView.id
+  const h2Element = document.querySelector(`#${activeViewID} .project-title`);
 
   if (name) {
     activeView.removeAttribute('id')
-    activeView.id = `${name}-title`
-    activeView.textContent = name
+    activeView.id = `${name}-project`
+    // activeView.textContent = name
     pElementInActiveButton.textContent = name
+    h2Element.textContent = name
     console.log(activeView.id)
     closeFormPopup();
   } else {

@@ -1,9 +1,10 @@
 function createToday() {
   const today = document.createElement("div");
-  today.classList.add('note')
+  // today.classList.add('note')
+  today.id = "today-project"
 
   const title = document.createElement("h2");
-  title.classList.add('note-title')
+  title.classList.add('project-title')
   title.textContent = "Today"
 
   today.appendChild(title)
@@ -12,7 +13,7 @@ function createToday() {
 }
 
 function loadToday() {
-  const notesView = document.getElementById("notes-view");
+  const notesView = document.getElementById("project-view");
   notesView.textContent = ""; // Used to clear previous content before appending active content
   notesView.appendChild(createToday());
 }

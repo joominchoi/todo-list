@@ -1,5 +1,5 @@
 import createSidebar from "./sidebar/sidebar";
-import createNotesView from "./notesView";
+import createNotesView from "./projectView";
 
 function createMain() {
   const main = document.createElement("main");

@@ -1,9 +1,10 @@
 function createInbox() {
   const inbox = document.createElement("div");
-  inbox.classList.add('note')
+  // inbox.classList.add('note')
+  inbox.id = 'inbox-project'
 
   const title = document.createElement("h2");
-  title.classList.add('note-title')
+  title.classList.add('project-title')
   title.textContent = "Inbox"
 
   inbox.appendChild(title)
@@ -12,7 +13,7 @@ function createInbox() {
 }
 
 function loadInbox() {
-  const notesView = document.getElementById("notes-view");
+  const notesView = document.getElementById("project-view");
   notesView.textContent = ""; // Used to clear previous content before appending active content
   notesView.appendChild(createInbox());
 }

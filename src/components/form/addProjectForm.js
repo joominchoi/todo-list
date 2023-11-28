@@ -1,7 +1,7 @@
-import githubLogo from "../assets/images/github-logo.svg";
-import setActiveButton from "../utils/setActiveButton";
-import loadNewProject from "../pages/newProject";
-import closeFormPopup from "../utils/closeFormPopup";
+import githubLogo from "../../assets/images/github-logo.svg";
+import setActiveButton from "../../utils/setActiveButton";
+import loadNewProject from "../../pages/newProject";
+import closeFormPopup from "../../utils/closeFormPopup";
 
 function createProjectForm() {
   // Create form element

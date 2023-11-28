@@ -1,9 +1,10 @@
 function createThisWeek() {
   const thisWeek = document.createElement("div");
-  thisWeek.classList.add('note')
+  // thisWeek.classList.add('note')
+  thisWeek.id = "this-week-project"
 
   const title = document.createElement("h2");
-  title.classList.add('note-title')
+  title.classList.add('project-title')
   title.textContent = "This Week"
 
   thisWeek.appendChild(title)
@@ -12,7 +13,7 @@ function createThisWeek() {
 }
 
 function loadThisWeek() {
-  const notesView = document.getElementById("notes-view");
+  const notesView = document.getElementById("project-view");
   notesView.textContent = ""; // Used to clear previous content before appending active content
   notesView.appendChild(createThisWeek());
 }

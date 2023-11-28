@@ -1,12 +1,14 @@
-import createProjectSettingsForm from "../components/projectSettingsForm";
+import createProjectSettingsForm from "../components/form/projectSettingsForm";
 import openFormPopup from "../utils/openFormPopup";
 
 function createNewProjectNotesView(userInput) {
   const newProject = document.createElement("div");
-  newProject.classList.add('note')
+  // newProject.classList.add('note')
+  newProject.id = `${userInput}-project`
 
   const title = document.createElement("h2");
-  title.id = (`${userInput}-title`)
+  // title.id = (`${userInput}-title`)
+  title.classList.add('project-title')
   title.textContent = userInput
 
   const settingsButton = document.createElement("button")
@@ -25,7 +27,7 @@ function createNewProjectNotesView(userInput) {
 }
 
 function loadNewProject(x) {
-  const notesView = document.getElementById("notes-view");
+  const notesView = document.getElementById("project-view");
   notesView.textContent = ""; // Used to clear previous content before appending active content
   notesView.appendChild(createNewProjectNotesView(x));
 }
