@@ -1,4 +1,6 @@
+import loadInbox from "../../pages/inbox";
 import closeFormPopup from "../../utils/closeFormPopup";
+import setActiveButton from "../../utils/setActiveButton";
 
 function createProjectSettingsForm() {
   const form = document.createElement('form');
@@ -23,7 +25,7 @@ function createProjectSettingsForm() {
   const deleteButton = document.createElement('button');
   deleteButton.type = 'button'; // Set type to button to prevent form submission (for demonstration purposes)
   deleteButton.textContent = 'Delete';
-  // submitButton.addEventListener('click', submitForm);
+  deleteButton.addEventListener('click', deleteProject);
 
   const closeButton = document.createElement('button');
   closeButton.textContent = 'Close';
@@ -40,7 +42,7 @@ function createProjectSettingsForm() {
 }
 
 function updateProject() {
-  console.log("Update Project button clicked")
+  console.log("Update button clicked")
 
   const nameInput = document.getElementById('project-name');
   const name = nameInput.value;
@@ -61,6 +63,31 @@ function updateProject() {
   } else {
     alert('Please fill out all fields.');
   }
+}
+
+function deleteProject() {
+  console.log("Delete button clicked");
+
+  const activeSidebarButton = document.querySelector('.sidebar-button.active');;
+  console.log(activeSidebarButton);
+  const activeProjectName = document.querySelector('.sidebar-button.active p').textContent;
+  console.log(activeProjectName);
+  const activeProjectView = document.getElementById(`${activeProjectName}-project`);
+  console.log(activeProjectView);
+
+  const userConfirmation = confirm(`Are you sure you want to delete "${activeProjectName}"?`);
+
+  if (userConfirmation) {
+    activeSidebarButton.parentNode.removeChild(activeSidebarButton);
+    activeProjectView.parentNode.removeChild(activeProjectView);
+    setActiveButton(document.getElementById('default-button'));
+    loadInbox();
+  } else {
+    console.log("Cancel button clicked")
+  }
+
+  closeFormPopup();
+
 }
 
 export default createProjectSettingsForm;
