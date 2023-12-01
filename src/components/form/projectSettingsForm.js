@@ -6,11 +6,9 @@ function createProjectSettingsForm() {
   const form = document.createElement('form');
   form.id = 'project-settings-form';
 
-  // Create label for Name input
   const nameLabel = document.createElement('label');
   nameLabel.textContent = 'Project Name: ';
 
-  // Create input for Name
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
   nameInput.id = 'project-name';
@@ -21,7 +19,6 @@ function createProjectSettingsForm() {
   updateButton.textContent = 'Update';
   updateButton.addEventListener('click', updateProject);
 
-  // Create button for project deletion
   const deleteButton = document.createElement('button');
   deleteButton.type = 'button'; // Set type to button to prevent form submission (for demonstration purposes)
   deleteButton.textContent = 'Delete';
@@ -55,7 +52,6 @@ function updateProject() {
   if (name) {
     activeView.removeAttribute('id')
     activeView.id = `${name}-project`
-    // activeView.textContent = name
     pElementInActiveButton.textContent = name
     h2Element.textContent = name
     console.log(activeView.id)
@@ -69,11 +65,8 @@ function deleteProject() {
   console.log("Delete button clicked");
 
   const activeSidebarButton = document.querySelector('.sidebar-button.active');;
-  console.log(activeSidebarButton);
   const activeProjectName = document.querySelector('.sidebar-button.active p').textContent;
-  console.log(activeProjectName);
   const activeProjectView = document.getElementById(`${activeProjectName}-project`);
-  console.log(activeProjectView);
 
   const userConfirmation = confirm(`Are you sure you want to delete "${activeProjectName}"?`);
 
