@@ -4,16 +4,13 @@ import loadNewProject from "../../pages/newProject";
 import closeFormPopup from "../../utils/closeFormPopup";
 
 function createProjectForm() {
-  // Create form element
   const form = document.createElement('form');
   form.id = 'add-project-form';
 
-  // Create label for Name input
   const nameLabel = document.createElement('label');
   nameLabel.textContent = 'Project Name: ';
   form.appendChild(nameLabel);
 
-  // Create input for Name
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
   nameInput.id = 'project-name';
@@ -22,7 +19,6 @@ function createProjectForm() {
 
   form.appendChild(document.createElement('br'));
 
-  // Create button for form submission
   const submitButton = document.createElement('button');
   submitButton.type = 'button'; // Set type to button to prevent form submission (for demonstration purposes)
   submitButton.textContent = 'Add';
@@ -37,7 +33,6 @@ function createProjectForm() {
   return form;
 }
 
-// Function to handle form submission
 function submitForm() {
   const sidebar = document.getElementById('sidebar')
 
@@ -46,7 +41,6 @@ function submitForm() {
   const name = nameInput.value;
 
   if (name) {
-    // alert(`Project added!\nProject name: ${name}`);
     sidebar.append(createNewProject(name));
     closeFormPopup();
     loadNewProject(name);
