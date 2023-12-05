@@ -18,7 +18,7 @@ function createInboxButton() {
   inboxButton.append(inboxButtonIcon);
   inboxButton.append(inboxButtonText);
 
-  inboxButton.addEventListener('click', (e) => {
+  inboxButton.addEventListener('click', () => {
     console.log('Inbox button has been clicked');
     setActiveButton(inboxButton);
     closeFormPopup();

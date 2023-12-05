@@ -17,7 +17,7 @@ function createTodayButton() {
   todayButton.append(todayButtonIcon);
   todayButton.append(todayButtonText);
 
-  todayButton.addEventListener('click', (e) => {
+  todayButton.addEventListener('click', () => {
     console.log('Today button has been clicked');
     setActiveButton(todayButton);
     closeFormPopup();

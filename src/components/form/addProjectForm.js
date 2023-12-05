@@ -65,7 +65,7 @@ export function createNewProject(userInput) {
 
   setActiveButton(newProjectButton);
 
-  newProjectButton.addEventListener('click', (e) => {
+  newProjectButton.addEventListener('click', () => {
     console.log(`${newProjectButtonText.textContent} has been clicked`);
     setActiveButton(newProjectButton);
     loadNewProject(newProjectButtonText.textContent);

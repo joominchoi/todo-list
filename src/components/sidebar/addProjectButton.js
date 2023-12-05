@@ -16,7 +16,7 @@ function createAddProjectButton() {
   addProjectButton.append(addProjectButtonIcon);
   addProjectButton.append(addProjectButtonText);
 
-  addProjectButton.addEventListener('click', (e) => {
+  addProjectButton.addEventListener('click', () => {
     console.log('Add Project button has been clicked');
     openFormPopup(createProjectForm());
   });

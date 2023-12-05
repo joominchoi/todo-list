@@ -15,7 +15,7 @@ function createNewProjectNotesView(userInput) {
   settingsButton.id = 'settings-button';
   settingsButton.textContent = 'Settings';
 
-  settingsButton.addEventListener('click', (e) => {
+  settingsButton.addEventListener('click', () => {
     console.log('Settings button has been clicked');
     openFormPopup(createProjectSettingsForm());
   });

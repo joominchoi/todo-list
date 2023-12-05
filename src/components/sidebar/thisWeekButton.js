@@ -17,7 +17,7 @@ function createThisWeekButton() {
   thisWeekButton.append(thisWeekButtonIcon);
   thisWeekButton.append(thisWeekButtonText);
 
-  thisWeekButton.addEventListener('click', (e) => {
+  thisWeekButton.addEventListener('click', () => {
     console.log('This Week button has been clicked');
     setActiveButton(thisWeekButton);
     closeFormPopup();

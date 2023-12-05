@@ -24,6 +24,7 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
 
 ## Recapping
 - Setting active and inactive elements by the addition and removal of a class name
+- The (e) is an event parameter, commonly named e or event, and it represents the event object. The event object contains information about the event, such as the type of event, the target element, and other relevant details; can be omitted if the event object is not needed.
 
 ## WIP
 - Refactor recent code
