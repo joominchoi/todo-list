@@ -1,7 +1,7 @@
-import githubLogo from "../../assets/images/github-logo.svg";
-import setActiveButton from "../../utils/setActiveButton";
-import loadNewProject from "../../pages/newProject";
-import closeFormPopup from "../../utils/closeFormPopup";
+import githubLogo from '../../assets/images/github-logo.svg';
+import setActiveButton from '../../utils/setActiveButton';
+import loadNewProject from '../../pages/newProject';
+import closeFormPopup from '../../utils/closeFormPopup';
 
 function createProjectForm() {
   const form = document.createElement('form');
@@ -34,7 +34,7 @@ function createProjectForm() {
 }
 
 function submitForm() {
-  const sidebar = document.getElementById('sidebar')
+  const sidebar = document.getElementById('sidebar');
 
   const nameInput = document.getElementById('project-name');
 
@@ -50,14 +50,14 @@ function submitForm() {
 }
 
 export function createNewProject(userInput) {
-  const newProjectButton = document.createElement("button");
-  newProjectButton.classList.add("sidebar-button");;
+  const newProjectButton = document.createElement('button');
+  newProjectButton.classList.add('sidebar-button');
 
   const newProjectButtonIcon = new Image();
-  newProjectButtonIcon.classList.add("sidebar-icon")
+  newProjectButtonIcon.classList.add('sidebar-icon');
   newProjectButtonIcon.src = githubLogo;
 
-  const newProjectButtonText = document.createElement("p");
+  const newProjectButtonText = document.createElement('p');
   newProjectButtonText.textContent = userInput;
 
   newProjectButton.append(newProjectButtonIcon);
@@ -65,7 +65,7 @@ export function createNewProject(userInput) {
 
   setActiveButton(newProjectButton);
 
-  newProjectButton.addEventListener("click", (e) => {
+  newProjectButton.addEventListener('click', (e) => {
     console.log(`${newProjectButtonText.textContent} has been clicked`);
     setActiveButton(newProjectButton);
     loadNewProject(newProjectButtonText.textContent);
@@ -75,4 +75,3 @@ export function createNewProject(userInput) {
 }
 
 export default createProjectForm;
-

@@ -1,6 +1,6 @@
-import loadInbox from "../../pages/inbox";
-import closeFormPopup from "../../utils/closeFormPopup";
-import setActiveButton from "../../utils/setActiveButton";
+import loadInbox from '../../pages/inbox';
+import closeFormPopup from '../../utils/closeFormPopup';
+import setActiveButton from '../../utils/setActiveButton';
 
 function createProjectSettingsForm() {
   const form = document.createElement('form');
@@ -14,7 +14,7 @@ function createProjectSettingsForm() {
   nameInput.id = 'project-name';
   nameInput.name = 'name';
 
-  const updateButton = document.createElement("button");
+  const updateButton = document.createElement('button');
   updateButton.type = 'button';
   updateButton.textContent = 'Update';
   updateButton.addEventListener('click', updateProject);
@@ -39,22 +39,22 @@ function createProjectSettingsForm() {
 }
 
 function updateProject() {
-  console.log("Update button clicked")
+  console.log('Update button clicked');
 
   const nameInput = document.getElementById('project-name');
   const name = nameInput.value;
 
   const pElementInActiveButton = document.querySelector('.sidebar-button.active p');
-  const activeView = document.getElementById(`${pElementInActiveButton.textContent}-project`)
-  const activeViewID = activeView.id
+  const activeView = document.getElementById(`${pElementInActiveButton.textContent}-project`);
+  const activeViewID = activeView.id;
   const h2Element = document.querySelector(`#${activeViewID} .project-title`);
 
   if (name) {
-    activeView.removeAttribute('id')
-    activeView.id = `${name}-project`
-    pElementInActiveButton.textContent = name
-    h2Element.textContent = name
-    console.log(activeView.id)
+    activeView.removeAttribute('id');
+    activeView.id = `${name}-project`;
+    pElementInActiveButton.textContent = name;
+    h2Element.textContent = name;
+    console.log(activeView.id);
     closeFormPopup();
   } else {
     alert('Please fill out all fields.');
@@ -62,9 +62,9 @@ function updateProject() {
 }
 
 function deleteProject() {
-  console.log("Delete button clicked");
+  console.log('Delete button clicked');
 
-  const activeSidebarButton = document.querySelector('.sidebar-button.active');;
+  const activeSidebarButton = document.querySelector('.sidebar-button.active');
   const activeProjectName = document.querySelector('.sidebar-button.active p').textContent;
   const activeProjectView = document.getElementById(`${activeProjectName}-project`);
 
@@ -76,12 +76,10 @@ function deleteProject() {
     setActiveButton(document.getElementById('default-button'));
     loadInbox();
   } else {
-    console.log("Cancel button clicked")
+    console.log('Cancel button clicked');
   }
 
   closeFormPopup();
-
 }
 
 export default createProjectSettingsForm;
-
