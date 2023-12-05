@@ -1,4 +1,4 @@
-function setActiveButton(button) {
+function setActiveButton(activeButton) {
   const buttons = document.querySelectorAll('.sidebar-button, .note');
 
   buttons.forEach((button) => {
@@ -7,7 +7,7 @@ function setActiveButton(button) {
     }
   });
 
-  button.classList.add('active');
+  activeButton.classList.add('active');
 }
 
 export default setActiveButton;
