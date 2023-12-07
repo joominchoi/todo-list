@@ -1,11 +1,11 @@
-import createInboxButton from "./inboxButton";
-import createTodayButton from "./todayButton";
-import createThisWeekButton from "./thisWeekButton";
-import createAddProjectButton from "./addProjectButton";
+import createInboxButton from './inboxButton';
+import createTodayButton from './todayButton';
+import createThisWeekButton from './thisWeekButton';
+import createAddProjectButton from './addProjectButton';
 
 function createSidebar() {
-  const sidebar = document.createElement("div");
-  sidebar.id = "sidebar";
+  const sidebar = document.createElement('div');
+  sidebar.id = 'sidebar';
 
   sidebar.append(createInboxButton());
   sidebar.append(createTodayButton());

@@ -1,4 +1,4 @@
-import initializeWebsite from './App'
-import './assets/styles/style.css'
+import initializeWebsite from './App';
+import './assets/styles/style.css';
 
 initializeWebsite();
