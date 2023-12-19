@@ -21,6 +21,7 @@ of a hierarchy tree and all its branches (I need to come up with a better way to
 - When restructuring files and folders, make sure to double check imports and pathing to assets such as images
 - Check that npx webpack --watch is running after restarting machine; I was wondering why my changes weren't being applied before realising this mistake.
 - IDs shouldn't start with a digit or contain spaces or special characters (except for hyphens - and underscores _); I encountered an issue when I was trying to dynamically query an id using the textcontent of another element that began with a digit (I was using numbers as an example).
+- Callbacks are functions that get passed into other functions; example would be a function inside an addEventListener
 
 ## Recapping
 - Setting active and inactive elements by the addition and removal of a class name
